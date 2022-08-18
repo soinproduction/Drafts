@@ -1,0 +1,59 @@
+.index-first {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: clamp(25px, 4.167vw, 60px);
+
+
+  &__box {
+    padding:
+    clamp(30px, 4.375vw, 63px)
+    clamp(20px, 4.528vw, 94px)
+    clamp(50px, 7.639vw, 110px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: clamp(30px, 5.417vw, 78px);
+
+    h1 {
+      @include mobile() {
+        max-width: clamp(175px, 43.403vw, 320px);
+      }
+    }
+  }
+
+  &__content  {
+    display: grid;
+    grid-template-columns: clamp(290px, 38.194vw, 550px) 1fr;
+    grid-gap: clamp(30px, 4.722vw, 68px);
+    align-items: center;
+    justify-content: center;
+
+    @include tablet() {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__article {
+    max-width: 476px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.083vw, 30px);
+
+    @include tablet() {
+      max-width: 576px;
+      text-align: center;
+    }
+  }
+
+  &__label {
+    background-color: var(--bg-d);
+    padding: clamp(20px, 3.264vw, 47px) 0;
+    text-align: center;
+    border-radius: 0 0 clamp(25px, 4.167vw, 60px) clamp(25px, 4.167vw, 60px);
+    p {
+      color: var(--color-c);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
